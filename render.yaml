@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: shruti-music
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg -y
+      pip install -r requirements.txt
+    startCommand: python3 -m ShrutiMusic
+    autoDeploy: true
+    envVars:
+      - key: API_ID
+        value: 33836936
+      - key: API_HASH
+        value: 7e6fa76b8cfc33c9b4cc684c4a283d05
+      - key: BOT_TOKEN
+        value: "7463997374:AAHFvCtj-_HLHW9UZnNJHOpN0aAM9tl91tw"  # ← YAHAN DAALO
+      - key: MONGO_DB_URI
+        value: mongodb+srv://superboygisan:superboygisan@cluster0.54iwjm0.mongodb.net/?appName=Cluster0
+      - key: OWNER_ID
+        value: 6903379369
+      - key: OWNER_USERNAME
+        value: II_SB_SIMPLE_II
+      - key: BOT_USERNAME
+        value: misskittymusicbot
+      - key: UPSTREAM_REPO
+        value: https://github.com/superboygisan/SB_shruti.git
+      - key: STRING_SESSION
+        value: "BQIET4gADHG5K2-tOEKhcfarT6mioa26pSAUkXHJt3KeY8DY6pbCB-sN7NdQaxNrXoheAAB8y4hLTbmrKo4RkeAvoBiy2f_CIHwOhlDoytGA-CR5nWQF88Azlfdjx0orffKMtFczu0SJrMfYfBHL7DN1QSJsI-4jG0I2lfwbbjTAabJkWdi7FYERURPh890NnKW9VDfW2I06l_O7LqAtCz65r7eLqJ92KFVWDka0CasKfW63qBxBfbRnzfEXS_pbfGb9U1uRl3ld0xrD3peJDQao_fFeehxRBlHd10Vfi6PvcFBYBi_RMy81VUHrvkeb9MVmE63dE6BtWLU164jLGhQC5fjXjQAAAAGUFkK0AA"  # ← YAHAN DAALO
+      - key: LOG_GROUP_ID
+        value: -1002460622908
+      - key: SUPPORT_GROUP
+        value: https://t.me/ShrutiBotsupport
+      - key: SUPPORT_CHANNEL
+        value: https://t.me/ShrutiBots
+      - key: INSTAGRAM
+        value: https://instagram.com/yaduwanshi_nand
+      - key: YOUTUBE
+        value: https://youtube.com/@NandEditz
+      - key: GITHUB
+        value: https://github.com/NoxxOP
+      - key: DONATE
+        value: https://t.me/ShrutiBots/91
